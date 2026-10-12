@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
 public class SanityTest {
 
     @Test
-    public void openSauceDemo() {
+    public void openSauceDemo() throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com");
+        Thread.sleep(2000);
         System.out.println("Title: " + driver.getTitle());
+        
         driver.quit();
     }
 }
